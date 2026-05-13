@@ -28,6 +28,7 @@ public class Solution {
         return false;
     }
 
+    // 相对速度是 1, 只要 fast 比 slow 多跑一圈就可以相遇了
     public boolean hasCycleOptimal(ListNode head) {
         // 最优方法不用 HashSet, 不用额外空间辅助
         if(head == null) return false;
