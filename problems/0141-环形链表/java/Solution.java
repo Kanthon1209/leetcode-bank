@@ -27,4 +27,19 @@ public class Solution {
         }
         return false;
     }
+
+    public boolean hasCycleOptimal(ListNode head) {
+        // 最优方法不用 HashSet, 不用额外空间辅助
+        if(head == null) return false;
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
 }
